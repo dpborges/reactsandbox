@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+  height: 7rem;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  animation: smoothScroll .25s forwards;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-98px);
+  }
+ 
+  100% {
+    transform: translateY(0px);
+  }
+}
