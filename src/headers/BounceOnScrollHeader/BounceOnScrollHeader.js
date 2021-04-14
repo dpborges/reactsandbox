@@ -6,6 +6,10 @@ import './bounce-on-scroll.css';
 
 // *********************************************************************************
 // Example of a Header that provides a small bounce on scroll and sticks to top of viewport
+// To implement place the useSticky hook in the parent and passdown the the isSticky
+// and elementRef down to the childe compoment
+// In the child component, attach the ref and use the isStick prop to add / remove
+// the stick class.
 // *********************************************************************************
 function BounceOnScrollHeader() {
 
@@ -18,7 +22,7 @@ function BounceOnScrollHeader() {
       <div className={isSticky ? "header sticky" : "header"} id="myHeader" ref={elementRef} >
         <h2>My Header</h2>
       </div>
-      {/* <div className={isSticky ? "content sticky" : "content"}> */}
+      
       <div className="content"> 
         <h3>On Scroll Sticky Header / isSticky value: {isSticky ? "true" : "false"}</h3>
         <p>The header will stick to the top when you reach its scroll position.</p>
@@ -32,6 +36,7 @@ function BounceOnScrollHeader() {
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
       </div>
+
     </>
    )
 }
